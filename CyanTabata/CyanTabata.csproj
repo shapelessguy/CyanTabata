@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{00CC1140-C1E5-42C1-BD83-12AF16AF26E4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CyanTabata</RootNamespace>
+    <AssemblyName>CyanTabata</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.7.0.7, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.7.0.7\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Archivio.cs" />
+    <Compile Include="Bottoni.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Compila.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compila.Designer.cs">
+      <DependentUpon>Compila.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Date.cs" />
+    <Compile Include="Eventi.cs" />
+    <Compile Include="EvProgressi.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Impostazioni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Impostazioni.Designer.cs">
+      <DependentUpon>Impostazioni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Input.cs" />
+    <Compile Include="MButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PanelInfo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pannello1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pannello2cs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pannello3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pannello4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pannello_Schede.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scheda.cs" />
+    <Compile Include="Set_pulsanti.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SottoPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Compila.resx">
+      <DependentUpon>Compila.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Impostazioni.resx">
+      <DependentUpon>Impostazioni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\16.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\17.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\18.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\19.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\20.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\3.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\4.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\5.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\6.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\7.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\8.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\9.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\10.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\11.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\12.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\13.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\14.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\15.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\champion.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\t1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\t2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\t3.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\t4.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\t5.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\t10.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\t20.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\t30.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\riposo.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\partenza.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\stat3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\nullo.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Spesa_Complessiva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Tesoro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Banca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Calendario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Cassaforte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Freccia_dx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Freccia_sx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Guadagno_complessivo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Guadagno_Complessivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Guadagno_giorno - Copia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Guadagno_giorno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Plus1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Portafogli.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Spesa_giorno - Copia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Spesa_giorno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Note.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Red_X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Documenti.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Ingranaggio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Peso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Clipboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Statistics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\1_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\2_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\3_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\4_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\5_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\6_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\7_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\8_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\9_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\10_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\11_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\12_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\13_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\14_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\15_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\16_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\17_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\18_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\19_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\20_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\champion_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\nullo_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\partenza_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\riposo_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\t1_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\t2_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\t3_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\t4_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\t5_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\t10_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\t20_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio_soft\t30_soft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Arancione.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Rosso.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Verde.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
