@@ -77,7 +77,7 @@ namespace CyanTabata
             Data.Location = new Point(30, 15);
             try
             {
-                if (progresso.scheda == null) { Progressi.Text = "Compila scheda Progressi"; Nome_Scheda.Text = ""; Nome_Scheda.Visible = false; Scheda_Progressi.Visible = false; Erase_Progressi.Visible=false; }
+                if (progresso == null || progresso.scheda == null) { Progressi.Text = "Compila scheda Progressi"; Nome_Scheda.Text = ""; Nome_Scheda.Visible = false; Scheda_Progressi.Visible = false; Erase_Progressi.Visible=false; }
                 else { Nome_Scheda.Show(); Scheda_Progressi.Show(); Progressi.Text = "Modifica scheda Progressi"; Scheda_Progressi.Text = progresso.scheda; Erase_Progressi.Show(); }
             }
             catch (Exception) { Progressi.Text = "Compila scheda Progressi"; Nome_Scheda.Text = ""; Nome_Scheda.Visible = false; Scheda_Progressi.Visible = false; }
